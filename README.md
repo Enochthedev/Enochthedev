@@ -1,5 +1,5 @@
 <br clear="both">
-<h2 align="left">Hi!👋 My name is Enoch and I'm a back-end and AI engineer.</h2>
+<h2 align="left">Hi!👋 My name is Enoch. I'm a back-end and AI engineer.</h2>
 
 ###
 
