@@ -20,6 +20,10 @@ data model, the infrastructure it runs on, and the docs the client actually read
 and AI-heavy, comfortable enough in Figma and on a sales call to take a brief straight
 through to a running deploy.
 
+A lot of that work is **payments and commerce integration** — Stripe, Paystack, Paddle,
+Shopify, and whichever PSP the client is already locked into. Webhooks, reconciliation and
+the retry paths that only show up in production.
+
 ## ● Services running
 
 Status is real, checked by hand — not a badge that turns green on its own.
@@ -28,12 +32,12 @@ Status is real, checked by hand — not a badge that turns green on its own.
 |---|---|---|---|---|
 | **[WaveStack](https://github.com/Enochthedev/WaveStack)** · [↗ live](https://lars-sandy.vercel.app) | 🟢 `live` | AI content pipeline — the biggest system here | FastAPI · LangChain · Anthropic · Docker | 53 commits · 15 test suites · 33 Dockerfiles |
 | **[gitsink-api](https://github.com/Enochthedev/gitsink-api)** | ⚪ `source` | Git-backed sync API. My strongest engineering | NestJS · GraphQL · Postgres | 149 commits · 98 test files · 5 CI workflows |
-| **[giga-super-app](https://github.com/Enochthedev/giga-super-app)** | ⚪ `source` | Multi-vertical backend: hotels, taxi, shop | Express · BullMQ · Supabase · Stripe | 237 commits · queue-driven |
 | **[peeksy](https://github.com/Enochthedev/peeksy)** | ⚪ `source` | Most recent product, a full monorepo | Hono · Next.js · Drizzle | 160 commits |
 | **[remote-dev-kit](https://github.com/Enochthedev/remote-dev-kit)** | ⚪ `source` | Remote dev CLI, with a [VS Code companion](https://github.com/Enochthedev/remote-dev-kit-vscode) and a Homebrew tap | TypeScript · CLI | ships via `brew` |
+| **[errvine](https://github.com/Enochthedev/errvine)** | 🔵 `building` | SLO and error-budget tracking, where an LLM call is just another service call | Go | new · scaffold + CI green |
 | **[is-my-startup-Trash](https://github.com/Enochthedev/is-my-startup-Trash)** · [↗ live](https://is-my-startup-trash.vercel.app) | 🟡 `degraded` | Roasts your startup idea before an investor does | FastAPI · OpenAI | frontend up, old backend host retired |
 
-<sub>🟢 deployed and serving · 🟡 partially up, known cause · ⚪ source only, runs locally</sub>
+<sub>🟢 deployed and serving · 🟡 partially up, known cause · 🔵 in active build · ⚪ source only, runs locally</sub>
 
 ## ⇄ Request path
 
@@ -46,7 +50,7 @@ flowchart LR
     C --> D["Docker"]
     D --> E["Kubernetes<br/>Cloud Run"]
     E --> F["handover docs"]
-    C -.->|"Paystack · Paddle"| G["payments"]
+    C -.->|"Stripe · Paystack · Shopify"| G["payments"]
 ```
 
 ## ⚙ Stack
@@ -57,7 +61,7 @@ flowchart LR
 | **Also use** | TypeScript |
 | **Frameworks** | FastAPI · NestJS |
 | **Infra** | Docker · Kubernetes · Cloud Run |
-| **Integrations** | Paystack · Paddle |
+| **Payments & commerce** | Stripe · Paystack · Paddle · Shopify · PSP integrations generally |
 | **Also comfortable with** | Figma/UI design · client documentation · pre-sales |
 
 <p>
@@ -95,27 +99,15 @@ backend code under review conditions, read this one rather than the flashier pro
 
 </details>
 
-<details>
-<summary><b>giga-super-app</b> — queues, payments, many verticals</summary>
-
-<br>
-
-A multi-vertical backend — hotels, taxi, shop — sharing one auth and payment core.
-BullMQ carries anything that shouldn't happen inside a request, Supabase holds the data,
-Stripe takes the money. 237 commits, and the place most of my queue and webhook scars
-came from.
-
-</details>
-
 ## ⇄ Interfaces
 
-**Open to:** agency subcontracts · backend and AI builds · systems someone else started and needs finished
+**Open to:** agency subcontracts · backend and AI builds · payment and commerce integrations · systems someone else started and needs finished
 
 | | |
 |---|---|
 | Email | [wavedidwhat@gmail.com](mailto:wavedidwhat@gmail.com) |
 | LinkedIn | [tolu-the-engineer](https://www.linkedin.com/in/tolu-the-engineer/) |
 | Writing | [medium.com/@whatisupwave](https://medium.com/@whatisupwave) |
-| Elsewhere | [X](https://x.com/whatisupwave) · [YouTube](https://www.youtube.com/@whatsupwave) · [Discord](https://discord.gg/V79u4V3cwG) |
+| Elsewhere | [X](https://x.com/wavedidwhat) · [YouTube](https://www.youtube.com/@whatsupwave) · [Discord](https://discord.gg/V79u4V3cwG) |
 
 <sub><code>uptime: since 2021 · 153 repos · WAT, overlapping UK/EU hours</code></sub>
