@@ -20,6 +20,10 @@ data model, the infrastructure it runs on, and the docs the client actually read
 and AI-heavy, comfortable enough in Figma and on a sales call to take a brief straight
 through to a running deploy.
 
+A lot of that work is **payments and commerce integration** — Stripe, Paystack, Paddle,
+Shopify, and whichever PSP the client is already locked into. Webhooks, reconciliation and
+the retry paths that only show up in production.
+
 ## ● Services running
 
 Status is real, checked by hand — not a badge that turns green on its own.
@@ -28,7 +32,7 @@ Status is real, checked by hand — not a badge that turns green on its own.
 |---|---|---|---|---|
 | **[WaveStack](https://github.com/Enochthedev/WaveStack)** · [↗ live](https://lars-sandy.vercel.app) | 🟢 `live` | AI content pipeline — the biggest system here | FastAPI · LangChain · Anthropic · Docker | 53 commits · 15 test suites · 33 Dockerfiles |
 | **[gitsink-api](https://github.com/Enochthedev/gitsink-api)** | ⚪ `source` | Git-backed sync API. My strongest engineering | NestJS · GraphQL · Postgres | 149 commits · 98 test files · 5 CI workflows |
-| **[giga-super-app](https://github.com/Enochthedev/giga-super-app)** | ⚪ `source` | Multi-vertical backend: hotels, taxi, shop | Express · BullMQ · Supabase · Stripe | 237 commits · queue-driven |
+| **[giga-super-app](https://github.com/Enochthedev/giga-super-app)** | ⚪ `source` | **Client work.** Multi-vertical backend: hotels, taxi, shop | Express · BullMQ · Supabase · Stripe | 237 commits · queue-driven |
 | **[peeksy](https://github.com/Enochthedev/peeksy)** | ⚪ `source` | Most recent product, a full monorepo | Hono · Next.js · Drizzle | 160 commits |
 | **[remote-dev-kit](https://github.com/Enochthedev/remote-dev-kit)** | ⚪ `source` | Remote dev CLI, with a [VS Code companion](https://github.com/Enochthedev/remote-dev-kit-vscode) and a Homebrew tap | TypeScript · CLI | ships via `brew` |
 | **[is-my-startup-Trash](https://github.com/Enochthedev/is-my-startup-Trash)** · [↗ live](https://is-my-startup-trash.vercel.app) | 🟡 `degraded` | Roasts your startup idea before an investor does | FastAPI · OpenAI | frontend up, old backend host retired |
@@ -57,7 +61,7 @@ flowchart LR
 | **Also use** | TypeScript |
 | **Frameworks** | FastAPI · NestJS |
 | **Infra** | Docker · Kubernetes · Cloud Run |
-| **Integrations** | Paystack · Paddle |
+| **Payments & commerce** | Stripe · Paystack · Paddle · Shopify · PSP integrations generally |
 | **Also comfortable with** | Figma/UI design · client documentation · pre-sales |
 
 <p>
@@ -100,7 +104,7 @@ backend code under review conditions, read this one rather than the flashier pro
 
 <br>
 
-A multi-vertical backend — hotels, taxi, shop — sharing one auth and payment core.
+Client work. A multi-vertical backend — hotels, taxi, shop — sharing one auth and payment core.
 BullMQ carries anything that shouldn't happen inside a request, Supabase holds the data,
 Stripe takes the money. 237 commits, and the place most of my queue and webhook scars
 came from.
@@ -109,7 +113,7 @@ came from.
 
 ## ⇄ Interfaces
 
-**Open to:** agency subcontracts · backend and AI builds · systems someone else started and needs finished
+**Open to:** agency subcontracts · backend and AI builds · payment and commerce integrations · systems someone else started and needs finished
 
 | | |
 |---|---|
