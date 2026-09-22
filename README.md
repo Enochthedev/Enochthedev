@@ -10,7 +10,7 @@
   <a href="mailto:wavedidwhat@gmail.com"><img alt="Email" src="https://img.shields.io/badge/hire-email-D14836?style=flat-square&logo=gmail&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/tolu-the-engineer/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-tolu--the--engineer-0077B5?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://medium.com/@whatisupwave"><img alt="Medium" src="https://img.shields.io/badge/Medium-writing-12100E?style=flat-square&logo=medium&logoColor=white"></a>
-  <a href="https://x.com/wavedidwhat"><img alt="X" src="https://img.shields.io/badge/X-@whatisupwave-1DA1F2?style=flat-square&logo=x&logoColor=white"></a>
+  <a href="https://x.com/wavedidwhat"><img alt="X" src="https://img.shields.io/badge/X-@wavedidwhat-1DA1F2?style=flat-square&logo=x&logoColor=white"></a>
 </p>
 
 ---
