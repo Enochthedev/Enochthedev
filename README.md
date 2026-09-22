@@ -35,9 +35,10 @@ Status is real, checked by hand — not a badge that turns green on its own.
 | **[giga-super-app](https://github.com/Enochthedev/giga-super-app)** | ⚪ `source` | **Client work.** Multi-vertical backend: hotels, taxi, shop | Express · BullMQ · Supabase · Stripe | 237 commits · queue-driven |
 | **[peeksy](https://github.com/Enochthedev/peeksy)** | ⚪ `source` | Most recent product, a full monorepo | Hono · Next.js · Drizzle | 160 commits |
 | **[remote-dev-kit](https://github.com/Enochthedev/remote-dev-kit)** | ⚪ `source` | Remote dev CLI, with a [VS Code companion](https://github.com/Enochthedev/remote-dev-kit-vscode) and a Homebrew tap | TypeScript · CLI | ships via `brew` |
+| **[errvine](https://github.com/Enochthedev/errvine)** | 🔵 `building` | SLO and error-budget tracking, where an LLM call is just another service call | Go | new · scaffold + CI green |
 | **[is-my-startup-Trash](https://github.com/Enochthedev/is-my-startup-Trash)** · [↗ live](https://is-my-startup-trash.vercel.app) | 🟡 `degraded` | Roasts your startup idea before an investor does | FastAPI · OpenAI | frontend up, old backend host retired |
 
-<sub>🟢 deployed and serving · 🟡 partially up, known cause · ⚪ source only, runs locally</sub>
+<sub>🟢 deployed and serving · 🟡 partially up, known cause · 🔵 in active build · ⚪ source only, runs locally</sub>
 
 ## ⇄ Request path
 
@@ -50,7 +51,7 @@ flowchart LR
     C --> D["Docker"]
     D --> E["Kubernetes<br/>Cloud Run"]
     E --> F["handover docs"]
-    C -.->|"Paystack · Paddle"| G["payments"]
+    C -.->|"Stripe · Paystack · Shopify"| G["payments"]
 ```
 
 ## ⚙ Stack
